@@ -1,4 +1,5 @@
 build.bat
+build_linux.bat
 build.sh
 PlasmoAvatars
 PlasmoAvatars.exe

@@ -144,14 +144,13 @@ func getFast(c *routing.Context) error {
 
 	var th []string
 
+	generated[2] = (hash >> uint(16)) & (len(light_colors) - 2)
+	generated[3] = len(light_colors) - 1
+
 	if theme == "light" {
 		th = light_colors
-		generated[2] = (hash >> uint(16)) & (len(light_colors) - 2)
-		generated[3] = len(light_colors) - 1
 	} else {
 		th = dark_colors
-		generated[2] = (hash >> uint(24)) & (len(dark_colors) - 2)
-		generated[3] = len(dark_colors) - 1
 	}
 
 	if inverted {
