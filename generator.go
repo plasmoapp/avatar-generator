@@ -54,14 +54,14 @@ func main() {
 	}
 
 	/* Read and cache light colors */
-	file, err = os.Open("./light_colors")
+	file1, err := os.Open("./light_colors")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	defer file.Close()
+	defer file1.Close()
 
-	scanner = bufio.NewScanner(file)
+	scanner = bufio.NewScanner(file1)
 	for scanner.Scan() {
 		light_colors = append(light_colors, scanner.Text())
 	}
@@ -71,14 +71,14 @@ func main() {
 	}
 
 	/* Read and cache dark colors */
-	file, err = os.Open("./dark_colors")
+	file2, err := os.Open("./dark_colors")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	defer file.Close()
+	defer file2.Close()
 
-	scanner = bufio.NewScanner(file)
+	scanner = bufio.NewScanner(file2)
 	for scanner.Scan() {
 		dark_colors = append(dark_colors, scanner.Text())
 	}
@@ -101,8 +101,8 @@ func main() {
 		LogAllErrors: false,
 	}
 
-	//panic(server.ListenAndServe(":80"))
-	panic(server.ListenAndServeTLS(":4097", "./certs/cert.crt", "./certs/s.key"))
+	panic(server.ListenAndServe(":80"))
+	//panic(server.ListenAndServeTLS(":4097", "./certs/cert.crt", "./certs/s.key"))
 }
 
 func getFast(c *routing.Context) error {
@@ -145,14 +145,13 @@ func getFast(c *routing.Context) error {
 
 	var th []string
 
+	generated[2] = (hash >> uint(16)) & (len(light_colors) - 2)
+	generated[3] = len(light_colors) - 1
+
 	if theme == "light" {
 		th = light_colors
-		generated[2] = (hash >> uint(16)) & (len(light_colors) - 2)
-		generated[3] = len(light_colors) - 1
 	} else {
 		th = dark_colors
-		generated[2] = (hash >> uint(24)) & (len(dark_colors) - 2)
-		generated[3] = len(dark_colors) - 1
 	}
 
 	if inverted {
