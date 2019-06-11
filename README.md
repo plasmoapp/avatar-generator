@@ -1,1 +1,1 @@
-# avatar-generator
+# Avatar Generator
