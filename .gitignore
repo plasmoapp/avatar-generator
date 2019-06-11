@@ -3,4 +3,5 @@ build_linux.bat
 build.sh
 PlasmoAvatars
 PlasmoAvatars.exe
-cert/
+certs/
+test/
