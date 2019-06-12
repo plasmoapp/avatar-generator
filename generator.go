@@ -174,6 +174,7 @@ func getFast(c *routing.Context) error {
 	c.Response.Header.Set("Content-Type", "image/svg+xml")
 	c.Response.Header.Set("Content-Disposition", `inline; filename="avatar.svg"`)
 	c.Response.Header.Set("Content-Length", strconv.Itoa(len([]byte(svg))))
+	c.Response.Header.Set("Access-Control-Allow-Origin", "*")
 
 	c.Response.BodyWriter().Write([]byte(svg))
 	return nil
