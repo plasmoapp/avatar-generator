@@ -101,8 +101,8 @@ func main() {
 		LogAllErrors: false,
 	}
 
-	//panic(server.ListenAndServe(":80"))
-	panic(server.ListenAndServeTLS(":4097", "./certs/cert.crt", "./certs/s.key"))
+	panic(server.ListenAndServe(":80"))
+	//panic(server.ListenAndServeTLS(":4097", "./certs/cert.crt", "./certs/s.key"))
 }
 
 func getFast(c *routing.Context) error {
