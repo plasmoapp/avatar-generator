@@ -9,6 +9,5 @@
 <rect x="19.688" y="2.77405" width="10" height="4" rx="2" transform="rotate(15 19.688 2.77405)" fill="%v"/>
 <rect x="20" y="4" width="8" height="6" rx="3" fill="%v"/>
 <path d="M16 3L20 9L24 4L28 9L32 3" stroke="%v" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M31.4185 10C31.7935 9.07357 32 8.0609 32 7C32 5.9391 31.7935 4.92643 31.4185 4H44C45.6569 4 47 5.34315 47 7C47 8.65685 45.6569 10 44 10H31.4185ZM16.5815 10H4C2.34315 10 1 8.65685 1 7C1 5.34315 2.34315 4 4 4H16.5815C16.2065 4.92643 16 5.9391 16 7C16 8.0609 16.2065 9.07357 16.5815 10Z" fill="%v"/><circle cx="24" cy="7" r="6" fill="%v"/>
 <rect x="14" y="3" width="20" height="3" rx="1.5" fill="%v"/><path d="M27.5 8L24.5 5H30.5L27.5 8Z" fill="%v"/>
 <path d="M17 9C18.1825 8.55604 19 7.60347 19 6.5C19 5.39652 18.1825 4.44396 17 4" stroke="%v" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 9C29.8175 8.55604 29 7.60347 29 6.5C29 5.39652 29.8175 4.44396 31 4" stroke="%v" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="19" y="5" width="10" height="3" fill="%v"/>
